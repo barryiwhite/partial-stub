@@ -5,9 +5,9 @@ are just plain wrong because the developer did not understand the API. I also fi
 and difficult to understand. In the vast majority of cases a simple test implementation is sufficient and much easier 
 to understand and debug.
 
-That said however, I sometimes need to implement/mock just a few methods on a very wide interface and this is where 
-PartialStub helps. You can create an abstract implementing just the methods you need to test and use PartialStub to 
-construct an instance for the test.
+That said however, I do sometimes need to implement/mock just a few methods on a very wide interface and this is where 
+PartialStub helps. You can create an abstract class implementing just the methods you need to test and use PartialStub 
+to construct an instance for the test.
 
     public class PartialStubExampleTest {
         @Test
