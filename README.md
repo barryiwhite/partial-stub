@@ -9,17 +9,19 @@ That said however, I do sometimes need to implement/mock just a few methods on a
 PartialStub helps. You can create an abstract class implementing just the methods you need for the test and use PartialStub 
 to construct it:
 
-    public class PartialStubExampleTest {
-        @Test
-        public void testSize() {
-            TableModel partiallyImplementedTableModel = PartialStub.create(PartiallyImplementedTableModel.class);
-            assertEquals(3, partiallyImplementedTableModel.getRowCount());
-        }
+```java
+public class PartialStubExampleTest {
+    @Test
+    public void testRowCount() {
+        TableModel partiallyImplementedTableModel = PartialStub.create(PartiallyImplementedTableModel.class);
+        assertEquals(3, partiallyImplementedTableModel.getRowCount());
     }
+}
         
-    public abstract class PartiallyImplementedTableModel implements TableModel {
-        @Override
-        public int getRowCount() {
-            return 3;
-        }
+public abstract class PartiallyImplementedTableModel implements TableModel {
+    @Override
+    public int getRowCount() {
+        return 3;
     }
+}
+```
