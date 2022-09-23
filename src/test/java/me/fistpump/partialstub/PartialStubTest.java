@@ -3,7 +3,6 @@ package me.fistpump.partialstub;
 import org.junit.jupiter.api.Test;
 
 import javax.swing.table.TableModel;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +19,7 @@ class PartialStubTest {
 
     @Test
     public void unimplementedMethods() {
-        PartialStubException exception = assertThrows(PartialStubException.class, () -> {
+        AbstractMethodError exception = assertThrows(AbstractMethodError.class, () -> {
             TableModel partiallyImplementedTableModel = PartialStub.create(PartiallyImplementedTableModel.class);
             partiallyImplementedTableModel.getColumnCount();
         });
@@ -37,7 +36,7 @@ class PartialStubTest {
 
     @Test
     public void unimplementedMethodsOnHierarchy() {
-        PartialStubException exception = assertThrows(PartialStubException.class, () -> {
+        AbstractMethodError exception = assertThrows(AbstractMethodError.class, () -> {
             TableModel partiallyImplementedTableModel = PartialStub.create(PartiallyImplementedTableModel.class);
             partiallyImplementedTableModel.getColumnCount();
         });
@@ -46,7 +45,7 @@ class PartialStubTest {
 
     @Test
     public void nothingImplemented() {
-        PartialStubException exception = assertThrows(PartialStubException.class, () -> {
+        AbstractMethodError exception = assertThrows(AbstractMethodError.class, () -> {
             TableModel notImplementedTableModel = PartialStub.create(TableModel.class);
             notImplementedTableModel.getColumnCount();
         });
