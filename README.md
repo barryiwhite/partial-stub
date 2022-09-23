@@ -6,8 +6,8 @@ and difficult to understand. In the vast majority of cases a simple test impleme
 to understand and debug.
 
 That said however, I do sometimes need to implement/mock just a few methods on a very wide interface and this is where 
-PartialStub helps. You can create an abstract class implementing just the methods you need to test and use PartialStub 
-to construct an instance for the test.
+PartialStub helps. You can create an abstract class implementing just the methods you need for the test and use PartialStub 
+to construct it:
 
     public class PartialStubExampleTest {
         @Test
