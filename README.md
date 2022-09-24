@@ -13,8 +13,8 @@ to construct it:
 public class PartialStubExampleTest {
     @Test
     public void testRowCount() {
-        TableModel partiallyImplementedTableModel = PartialStub.create(PartiallyImplementedTableModel.class);
-        assertEquals(3, partiallyImplementedTableModel.getRowCount());
+        TableModel partiallyImplemented = PartialStub.create(PartiallyImplementedTableModel.class);
+        assertEquals(3, partiallyImplemented.getRowCount());
     }
 }
         
