@@ -25,3 +25,8 @@ public abstract class PartiallyImplementedTableModel implements TableModel {
     }
 }
 ```
+
+## FAQ
+
+##### Why would I not just use an existing mocking framework to create a partial stub?
+> You could, but then you are inviting your team to use every other feature of the framework (see intro above)
